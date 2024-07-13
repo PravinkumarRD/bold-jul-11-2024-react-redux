@@ -1,0 +1,180 @@
+Trainer Name - Pravinkumar Dabade
+Email - dabade.pravinkumar@gmail.com
+M. # - 9665622460
+
+React Application Project Structure - [Feature-wise Folder Structure]
+
+	SRC
+		
+		Employees
+			Components
+				EmployeesList.jsx
+				EmployeesList.module.css
+				EmployeeDetails.jsx
+				EmployeeDetails.module.css
+				RegisterEmployee.jsx
+				RegisterEmployee.module.css
+
+			Services	
+				EmployeesService.js	
+					Calls to Endpoints
+		Events
+			....
+				....
+			....
+				....
+		Navigation
+			Components
+				NavBar.jsx
+				Footer.jsx
+		Security
+			....
+				....
+			....
+				....
+		Home
+			...
+
+		Shared
+			Components
+				404, 401, 403, 500
+			Utilities
+				utility functions
+
+
+Code Pen URL - 
+
+https://codepen.io/pravinkumarcode/pen/zYLZwep
+
+
+Introduction to MongoDB Server - 
+
+RDBMS							NoSQL
+MySQL, Oracle, Microsoft SQL Server...				MongoDB Server
+	Databases							Databases
+		Table								Collection
+			Cols and Rows							Document
+
+What is document?
+It is JSON like object
+For Example
+
+{
+	key:value,
+	key:value,
+	key:{
+		key:value,
+		offices:[]
+	}
+}
+
+MongoDB Queries - 
+
+1) Show all existing database
+	show dbs;
+2) Create new database
+	use bold-events-db-jul-2024;
+3) Add/Create new collection in connected database
+	db.createCollection('events');
+	db.createCollection('employees');
+	db.createCollection('users');
+4) List all the collections
+	show collections;
+5) Insert documents
+	db.users.insertOne({email:'alisha.c@bold.com',password:'Welcome@123',role:'Hr'});
+	db.users.insertOne({email:'manish.kaushik@bold.com',password:'Welcome@123',role:'Employee'});
+6) Fetch/Select Documents
+	db.events.find(); //Select * from Table;
+
+8) Delete documents
+	db.users.deleteOne({email: 'alisha.c@bold.com'});
+	db.users.deleteMany({});
+
+
+Download and install Postman 
+
+
+Bold Service Endpoints - 
+
+	Events endpoints - 
+
+	http://localhost:9090/api/events [GET Request - Fetch all the documents]
+	http://localhost:9090/api/events/1020 [GET Request - Fetch Single document based on event Id]
+	http://localhost:9090/api/events [POST Request - Add new document]
+	
+	Employees endpoints - 
+
+	http://localhost:9090/api/employees [GET Request - Fetch all the documents]
+	http://localhost:9090/api/employees/1020 [GET Request - Fetch Single document based on event Id]
+	http://localhost:9090/api/employees [POST Request - Add new document]
+
+	Security endpoints - 
+	http://localhost:9090/api/users [POST - Register new User's credentials] 
+	http://localhost:9090/api/users/authenticate [POST - Register new User's credentials] 
+	
+
+Calling RESTful Resources using AJAX - 
+
+	1) fetch()
+	2) Axios - 
+
+In order to develop SPA - [Single Page Application], you need to install a react-router-dom package/library in your application
+
+	1) Declare routes and associate the components with each route
+
+		<Routes>
+			<Route ... />
+		</Routes>
+
+		http://localhost:3000 [Default Route] [Default Component/Home Component]
+		http://localhost:3000/home [Specific Route] [Home Component]
+		http://localhost:3000/events [Specific Route] [EventsList Component]
+		http://localhost:3000/events/1001 [Parameterized/Dynamic Route] [EventDetailsList Component]
+		http://localhost:3000/employees [Specific Route] [EmployeesList Component]
+		http://localhost:3000/login [Specific Route] [Login Component]
+	2) Router Outlet
+	3) Programmatic Routing
+	4) Declarative Routes [NavLink>]
+	5) Route Protection/Guards
+	6) It also maintains the browsing history of the end user
+	7) Read URL parameter values [useParams()]
+
+How should we write Custom Forms Hook?
+
+	1) Fetch and store input element values
+	2) If there are any error, it store the errors information about your elements
+	3) Call the submit event logic
+
+
+
+URL Login - 
+
+	http://localhost:3000/login
+	http://localhost:3000/login?returnurl=/events	
+
+React Context API - 
+
+	<Provider value={
+		state={AppState}
+		..functionToChangeState
+	}> - Gives/Provides the access to the state
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
